@@ -1,0 +1,100 @@
+## Build results
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+TestResults/
+*.log
+
+## User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.VC.db
+*.vsp
+*.vspx
+*.vspscc
+
+## Rider files
+.idea/
+*.sln.iml
+
+## Visual Studio Code
+.vscode/
+.history/
+
+## ASP.NET
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+## Entity Framework
+Migrations/
+
+## dotCover
+*.dotCover
+
+## NuGet
+*.nupkg
+*.snupkg
+*.nuspec
+packages/
+*.psmdcp
+
+## Azure
+*.azurePubxml
+*.publishproj
+PublishProfiles/
+
+## Resharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+
+## Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+## Others
+*.dbmdl
+*.bak
+*.orig
+*.tmp
+*.swp
+*.scc
+
+## Logs
+*.log
+logs/
+
+## Compiled DLLs and executables
+*.dll
+*.exe
+*.app
+*.pdb
+
+## Dotnet-specific
+*.deps.json
+*.runtimeconfig.json
+*.runtimeconfig.dev.json
+
+## Test coverage
+coverage*.json
+coverage*.xml
+coverage*.info
+coverage*.cobertura.xml
+coverage/
+lcov.info
+
+## Local tooling
+tools/
+
+## Temporary files
+*.tmp
+*.temp
+
+## Docker
+**/docker-compose*.override.yml
+**/.dockerignore
+
+# Ignore global.json override (if not needed in repo)
+global.json
