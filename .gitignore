@@ -21,6 +21,7 @@ TestResults/
 
 ## Visual Studio Code
 .vscode/
+.vs/
 .history/
 
 ## ASP.NET
