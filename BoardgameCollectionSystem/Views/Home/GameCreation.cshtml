@@ -1,0 +1,22 @@
+﻿@model GameCreationViewModel
+
+<form asp-controller="Home" asp-action="CreateGame" method="post">
+<h3> Veuillez sélectionner le jeu</h3>
+
+<select name="gameId">
+        @foreach (var boardgame in Model.BoardGames)
+        {
+            <option value="@boardgame.Id">@boardgame.Name</option>
+        }
+</select>
+
+    <h3> Veuillez sélectionner les joueurs</h3>
+    @foreach (var player in Model.Players)
+    {
+        <input type="checkbox" name="playerIds" value="@player.Id" />
+        <label>@player.Name</label>
+    }
+
+    <input type="submit" value="Créer la partie" />
+
+</form>

@@ -1,0 +1,22 @@
+﻿@model HomeIndexViewModel
+
+<h2>Voici les joueurs référencés sur l'application:</h2>
+
+@foreach(var player in Model.Players)
+{
+    <p>@player.Name</p>
+}
+
+<h2>Voici les parties en cours :</h2>
+<a asp-controller="Home" asp-action="GameCreation">Ajouter une partie</a>
+
+@foreach (var game in Model.Games)
+{
+    <p>@game.BoardGame.Name avec @game.Players.ToString()</p>
+}
+
+<h2>Voici les jeux :</h2>
+@foreach (var boardgame in Model.BoardGames)
+{
+    <p>@boardgame.Name</p>
+}
