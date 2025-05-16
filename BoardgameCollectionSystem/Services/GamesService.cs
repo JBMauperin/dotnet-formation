@@ -1,5 +1,6 @@
 ﻿using BoardgameCollectionSystem.Models;
 using BoardgameCollectionSystem.Repository;
+using Microsoft.EntityFrameworkCore;
 
 namespace BoardgameCollectionSystem.Services
 {
@@ -18,7 +19,7 @@ namespace BoardgameCollectionSystem.Services
 
         public List<Game> GetAllGames()
         {
-            return _context.Games.ToList();
+            return _context.Games.Include(g => g.Players).ToList();
         }
 
         public Game GetGameById(int id)

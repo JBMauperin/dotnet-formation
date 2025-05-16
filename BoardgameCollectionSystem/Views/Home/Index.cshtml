@@ -10,10 +10,21 @@
 <h2>Voici les parties en cours :</h2>
 <a asp-controller="Home" asp-action="GameCreation">Ajouter une partie</a>
 
-@foreach (var game in Model.Games)
-{
-    <p>@game.BoardGame.Name avec @game.Players.ToString()</p>
-}
+<ul>
+    @foreach (var game in Model.Games)
+    {
+        <li>
+            <p onclick="showGamePlayers(@game.Id)">Partie de @game.BoardGame.Name numéro @game.Id</p>
+            <ul id="gamePlayers-@game.Id" style="display: none;">
+                @foreach (var player in game.Players)
+                {
+                    <li>@player.Name</li>
+                }
+            </ul>
+        </li>
+    }
+</ul>
+
 
 <h2>Voici les jeux :</h2>
 @foreach (var boardgame in Model.BoardGames)
