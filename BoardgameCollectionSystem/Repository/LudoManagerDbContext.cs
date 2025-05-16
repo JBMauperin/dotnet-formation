@@ -5,10 +5,8 @@ namespace BoardgameCollectionSystem.Repository
 {
     public class LudoManagerDbContext : DbContext
     {
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        public LudoManagerDbContext(DbContextOptions<LudoManagerDbContext> options) : base(options)
         {
-            optionsBuilder.UseSqlServer("Server=localhost;Database=LudoManager;User Id=sa;Password=@M@r!s2024;TrustServerCertificate=True;");
-            //optionsBuilder.UseSqlServer("Server=localhost\\SQLEXPRESS;Database=LudoManager;TrustServerCertificate=True;Trusted_Connection=True;");
         }
 
         public DbSet<Player> Players { get; set; }

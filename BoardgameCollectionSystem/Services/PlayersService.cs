@@ -7,6 +7,8 @@ namespace BoardgameCollectionSystem.Services
     {
         private readonly LudoManagerDbContext _context;
 
+        public string Toto = "tata";
+
         public PlayersService(LudoManagerDbContext context)
         {
             _context = context;

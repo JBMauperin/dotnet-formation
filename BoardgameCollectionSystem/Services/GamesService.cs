@@ -9,11 +9,11 @@ namespace BoardgameCollectionSystem.Services
         private readonly PlayersService _playersService;
         private readonly BoardGamesService _boardGamesService;
 
-        public GamesService(LudoManagerDbContext context)
+        public GamesService(LudoManagerDbContext context, PlayersService playersService, BoardGamesService boardGamesService)
         {
             _context = context;
-            _playersService = new PlayersService(_context);
-            _boardGamesService = new BoardGamesService(_context);
+            _playersService = playersService;
+            _boardGamesService = boardGamesService;
         }
 
         public List<Game> GetAllGames()

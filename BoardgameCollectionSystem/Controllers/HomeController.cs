@@ -12,13 +12,11 @@ namespace BoardgameCollectionSystem.Controllers
         private readonly GamesService _gamesService;
         private readonly BoardGamesService _boardGamesService;
 
-        public HomeController()
+        public HomeController(LudoManagerDbContext context, PlayersService playersService, BoardGamesService boardGamesService, GamesService gamesService)
         {
-            var context = new LudoManagerDbContext();
-
-            _playersService = new PlayersService(context);
-            _gamesService = new GamesService(context);
-            _boardGamesService = new BoardGamesService(context);
+            _playersService = playersService;
+            _gamesService = gamesService;
+            _boardGamesService = boardGamesService;
         }
 
         [Route("")]
