@@ -1,0 +1,14 @@
+.col {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  border-radius: 12px;
+  background: #fff;
+  padding: 16px;
+  margin: 12px 8px;
+  transition: box-shadow 0.2s;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.col:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+}

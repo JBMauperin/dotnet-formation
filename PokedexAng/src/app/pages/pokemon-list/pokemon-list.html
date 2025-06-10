@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="col">
+        <h3>Voici ma liste de pokemons :</h3>
+    </div>
+</div>
+<div class="row">
+    @if(loadingPokemons) {
+        <p>Chargement en cours des pokemons...</p>
+    }
+    @else {
+        <div *ngFor="let pokemon of pokemons" class="col text-center">
+            <app-pokemon-badge [pokemon]="pokemon"></app-pokemon-badge>
+        </div>
+    }
+</div>
+<div class="row justify-content-center">
+    <div class="col-1 text-center" (click)="loadPreviousPokemons()">
+        <img src="/img/next-button.png" style="transform: scaleX(-1);" alt="Next" width="25" class="img-fluid" />
+        
+    </div>
+    <div class="col-1" (click)="loadNextPokemons()">
+        <img src="/img/next-button.png" alt="Next" width="25" class="img-fluid" />
+    </div>
+</div>
